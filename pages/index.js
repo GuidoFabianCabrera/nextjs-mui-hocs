@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { makeStyles } from '@mui/styles';
 
-import { TimerContext } from '../store/timer';
+import { ExampleContext } from '../store/example';
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
-  const { test } = useContext(TimerContext);
+  const { test } = useContext(ExampleContext);
 
   return (
     <div className={classes.box}>
-      <h1 onClick={test}>hola</h1>
+      <h1 onClick={test}>project</h1>
     </div>
   );
 };

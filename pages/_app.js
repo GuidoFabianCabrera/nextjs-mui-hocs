@@ -1,11 +1,11 @@
 import React from 'react';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
-import withTimer from './../hocs/withTimer';
 import createEmotionCache from '../utility/createEmotionCache';
 
-import theme from '../styles/theme/theme';
-import '../styles/globals.scss';
+import theme from './../styles/theme';
+
+import withExample from './../hocs/withExample';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -29,6 +29,6 @@ const Wrapper = (props) => {
   );
 };
 
-const hocs = [withTimer];
+const hocs = [withExample];
 
 export default hocs.reduce((prev, current) => current(prev), MyApp);
